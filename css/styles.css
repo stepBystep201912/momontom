@@ -5,12 +5,12 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 }
 body {
   color: #34495e;
   background-color: #2c3e50;
-  background-size: cover;
-  /* height: 100%; */
 }
 
 .form,
@@ -31,30 +31,34 @@ body {
   }
 }
 
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  /* background-size: 100% 100%; */
+  /* background-attachment: scroll; */
+  overflow: hidden;
+  /* z-index: -1; */
+}
+/* 
 .bgImage {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: -1;
+  background-size: cover;
   animation: fadeIn 0.5s linear;
-}
+} */
 
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .clock {
-  margin-top: 40px;
-  /* position: absolute;
-    width: 100%;
-    top: 30%;
-    text-align: center; */
+  margin-top: 30px;
 }
 
 h1 {
@@ -68,7 +72,6 @@ h1 {
 input {
   all: unset;
   width: 500px;
-  /* height: 30px; */
   border: none;
   background: none;
   border-bottom: 3px solid white;
@@ -92,6 +95,8 @@ input::placeholder {
   font-size: 40px;
 }
 .weather {
+  position: absolute;
+  top: 0;
   color: white;
   width: 100%;
   text-align: right;
@@ -105,6 +110,7 @@ input::placeholder {
   color: white;
   font-size: 40px;
   text-shadow: 0 0 5px #5d5252;
+  margin: 25px 0;
   /* margin-bottom: 20px; */
 }
 
@@ -113,6 +119,7 @@ ul {
   padding-left: 0px;
   font-size: 28px;
   width: 500px;
+  /* margin-bottom: 0; */
 }
 
 .toDoList button {
@@ -121,9 +128,6 @@ ul {
   cursor: pointer;
 }
 
-.toDoList li {
-  margin-bottom: 10px;
-}
 .toDoList span {
   color: white;
   text-shadow: 0 0 5px #5d5252;
